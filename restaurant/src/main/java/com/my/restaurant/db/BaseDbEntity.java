@@ -9,4 +9,5 @@ import lombok.NoArgsConstructor;
 @Data
 public class BaseDbEntity {
     protected Integer index;
+    protected String title;
 }
