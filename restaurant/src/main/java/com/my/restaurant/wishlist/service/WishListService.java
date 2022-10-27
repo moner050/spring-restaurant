@@ -78,6 +78,11 @@ public class WishListService {
 
     // 위시 리스트 추가
     public WishListDto add(WishListDto wishListDto) {
+
+        if(wishListRepository.existByTitle(wishListDto.getTitle())) {
+            return new WishListDto();
+        }
+
         WishListEntity wishListEntity = WishListEntity.builder()
                 .title(wishListDto.getTitle())
                 .category(wishListDto.getCategory())
