@@ -15,6 +15,13 @@ abstract public class BaseDbRepositoryAbstract<T extends BaseDbEntity> implement
         return db.stream().filter(it -> it.getIndex() == index).findFirst();
     }
 
+    public boolean existByTitle(String title) {
+         if(db.stream().anyMatch(it -> it.getTitle().equals(title))){
+             return true;
+         }
+         return false;
+    }
+
     @Override
     public T save(T entity) {
         Optional<T> optionalEntity = db.stream().filter(it -> it.getIndex() == entity.getIndex()).findFirst();
