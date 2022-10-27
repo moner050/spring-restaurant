@@ -1,0 +1,20 @@
+naver:
+  url:
+    search:
+      local: https://openapi.naver.com/v1/search/local.json  # https://developers.naver.com/docs/serviceapi/search/blog/blog.md#%EB%B8%94%EB%A1%9C%EA%B7%B8
+      image: https://openapi.naver.com/v1/search/image       # https://developers.naver.com/docs/serviceapi/search/image/image.md#%EC%9D%B4%EB%AF%B8%EC%A7%80
+  client:
+    id: Dt72CszKfSh5vaacXwNN
+    secret: _8HPxKQzBD
+
+spring:
+  thymeleaf:
+    check-template-location: true
+    cache: false
+    prefix: file:src/main/resources/templates/
+  web:
+    resources:
+      static-locations: file:./src/main/resources/static/
+
+server:
+  port: 8091
